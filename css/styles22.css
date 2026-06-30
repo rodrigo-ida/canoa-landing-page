@@ -297,11 +297,10 @@ body{
 
 
 
-
+/* 
 
 .courses{
     background:#000;
-    padding:110px 0;
 }
 
 .container{
@@ -327,6 +326,10 @@ body{
 .course-card{
     display:flex;
     flex-direction:column;
+}
+
+.card-img-and-label-wrapper{
+    max-height: 450px;
 }
 
 .course-image{
@@ -369,7 +372,7 @@ body{
 }
 
 .course-content h3{
-    font-size:1.45rem;
+    font-size:18px;
     line-height:1.2;
     margin-bottom:18px;
     font-weight:900;
@@ -436,4 +439,361 @@ body{
         font-size:3.4rem;
     }
 
+} */
+
+
+.courses__container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  .courses__card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .courses__image-placeholder {
+    width: 100%;
+    height: 200px; 
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .courses__category {
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .courses__content {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .courses__title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .courses__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1; 
+  }
+
+  .courses__button {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    align-self: flex-start; 
+  }
+
+  .courses__card-orange .courses__category { background-color: #d96f5b; color: #000; }
+  .courses__card-orange .courses__title { color: #d96f5b; }
+  .courses__card-orange .courses__button { background-color: #d96f5b; color: #000; }
+
+  .courses__card-pink .courses__category { background-color: #ff66cc; color: #000; }
+  .courses__card-pink .courses__title { color: #ff66cc; }
+  .courses__card-pink .courses__button { background-color: #ff66cc; color: #000; }
+
+  .courses__card-yellow .courses__category { background-color: #f6e05e; color: #000; }
+  .courses__card-yellow .courses__title { color: #f6e05e; }
+  .courses__card-yellow .courses__button { background-color: #f6e05e; color: #000; }
+
+.courses__card-green .courses__category { background-color: #4CAF50; color: #000; }
+.courses__card-green .courses__title { color: #4CAF50; }
+.courses__card-green .courses__button { background-color: #4CAF50; color: #000; }
+
+.courses__card-beige .courses__category { background-color: #dcb897; color: #000; }
+.courses__card-beige .courses__title { color: #dcb897; }
+.courses__card-beige .courses__button { background-color: #dcb897; color: #000; }
+
+.courses__card-white .courses__category { background-color: #f0f0f0; color: #000; }
+.courses__card-white .courses__title { color: #f0f0f0; }
+.courses__card-white .courses__button { background-color: #f0f0f0; color: #000; }
+
+
+
+
+
+
+
+
+
+.courses__schedule-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    background-color: #38b284;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .courses__day-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
+  }
+
+  .courses__day-header {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .courses__schedule-card {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .courses__schedule-time {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .courses__bg-pink { background-color: #ff85c0; }
+  .courses__bg-orange { background-color: #d25b42; color: white; }
+  .courses__bg-yellow { background-color: #e5d635; }
+  .courses__bg-beige { background-color: #c9ab86; }
+  .courses__bg-white { background-color: white; }
+
+  /* Specific styles for the side note */
+  .courses__side-note {
+    width: 200px;
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    margin-top: 50px; /* Align with the first row of cards */
+  }
+
+
+
+.courses__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+
+  .courses__discount-banner {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+  }
+
+  .courses__discount-title {
+    color: #4CAF50; /* Green color matching the image */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+
+  .courses__discount-amount {
+    color: #e5d635; /* Yellow color matching the image */
+    font-size: 5rem;
+    font-weight: 900; /* Extra bold */
+    line-height: 1;
+    margin: 0;
+  }
+
+  .courses__discount-text {
+    color: #e5d635; /* Yellow text for the conditions */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .courses__discount-text span {
+    color: white; /* White text for "até o dia 5" */
+  }
+
+
+  /* courses_contact.css */
+
+.courses__contact-section {
+  background-color: #c75c40; /* Orange background */
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.courses__contact-title {
+  color: #ff85c0; /* Pink title color */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.courses__contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.courses__contact-input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0; /* Light grey background for inputs */
+  color: #c75c40; /* Orange text color matching background */
+  font-size: 1rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.courses__contact-input::placeholder {
+  color: #c75c40; /* Orange placeholder text */
+  opacity: 1; /* Override default opacity */
+}
+
+.courses__select-wrapper {
+  position: relative;
+}
+
+.courses__contact-select {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Custom dropdown arrow */
+.courses__select-wrapper::after {
+  content: '\25BC'; /* Downward triangle */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #ff85c0; /* Pink color for the arrow */
+  pointer-events: none; /* Ensure clicks pass through to the select element */
+}
+
+.courses__contact-submit {
+  background-color: #ff85c0; /* Pink button */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: center; /* Center the button */
+  transition: background-color 0.3s ease;
+}
+
+.courses__contact-submit:hover {
+  background-color: #ff66aa; /* Slightly darker pink on hover */
+}
+
+
+/* footer.css */
+
+.footer__container {
+  background-color: #000;
+  color: #ff85c0; /* Pink color matching the text */
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Center items vertically */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.footer__icon {
+  width: 24px;
+  height: 24px;
+  /* You can replace these with actual SVG icons or font icons like FontAwesome */
+}
+
+.footer__address {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer__address strong {
+  font-size: 1.1rem;
+}
+
+.footer__website {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
 }
