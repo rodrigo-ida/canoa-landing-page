@@ -9,169 +9,134 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* .hero{
-    position:relative;
-    min-height:100vh;
-    overflow:hidden;
 
-} */
-
-.logo{
-    background-image: url('../assets/images/logo.png');
-    background-size: contain;
-    width: 150px;
-    height: 150px;
-    background-repeat: no-repeat;
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-content{
-    background:
-        url("../assets/images/topo.png") center center/contain no-repeat;
-    padding:50px 60px;
-    min-height:130vh;
+.bg-photo-placeholder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  /* max-width: 800px; */
+  height: auto;
+  z-index: 1;
+  object-fit: contain;
+  object-position: top right;
 }
 
-
-.hero h1{
-    display:flex;
-    flex-direction:column;
-    font-weight:900;
-    text-transform:uppercase;
-    line-height:.82;
-    font-size:50px;
-    margin-top:50px;
+.content-container {
+  position: relative;
+  z-index: 2;
+  padding: 30px 8% 40px 8%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-image: url('../assets/images/topo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 130vh;
 }
 
-.orange{
-    color:#F16C47;
+.logo-placeholder {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
 }
 
-.pink{
-    color:#F87CCB;
+.text-wrapper {
+  max-width: 700px;
+  position: relative;
+  z-index: 3;
 }
 
-.subtitle{
-    margin-top:30px;
-    color:#FFE53D;
-    font-size:23px;
-    line-height:1.05;
-    font-weight:900;
-    text-transform:uppercase;
+.text-wrapper img {
+    width: 40%;
 }
 
-.cta{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:35px;
-    padding:10px 34px;
-    background:#49C9A7;
-    color:#111;
-    text-decoration:none;
-    font-weight:900;
-    border-radius:40px;
-    transition:.3s;
+.main-title {
+  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
 }
 
-.cta:hover{
-    transform:translateY(-3px);
+.color-orange {
+  color: #EE6A4E;
 }
 
-.waves {
-    background-image: url('../assets/images/montanhas-e-barco.png');
-    width: 100vw;
-    height: 252px;
-    position: relative;
-    top: -100px;
-    background-size: 100vw 45vh;
-    background-repeat: no-repeat;
+.color-pink {
+  color: #FF6FCC;
 }
 
-.wave{
-    position:absolute;
-    width:120%;
-    left:-10%;
-    border-radius:50%;
+.subtitle {
+  color: #FADE3E;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
-.wave-orange{
-    height:170px;
-    background:#D85A3C;
-    bottom:105px;
-    clip-path:polygon(
-        0 42%,
-        7% 48%,
-        16% 36%,
-        25% 50%,
-        36% 38%,
-        48% 58%,
-        59% 40%,
-        71% 55%,
-        82% 36%,
-        100% 52%,
-        100% 100%,
-        0 100%
-    );
+.cta-button {
+  display: inline-block;
+  background-color: #4EBCA1;
+  color: #000000;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-transform: lowercase;
+  transition: transform 0.2s ease;
 }
 
-.wave-pink{
-    height:170px;
-    background:#F47BCB;
-    bottom:0;
-    clip-path:polygon(
-        0 55%,
-        12% 44%,
-        23% 60%,
-        34% 38%,
-        46% 54%,
-        60% 33%,
-        73% 52%,
-        86% 39%,
-        100% 24%,
-        100% 100%,
-        0 100%
-    );
+.cta-button:hover {
+  transform: scale(1.05);
 }
 
-.wave.second{
-    transform:scaleX(-1);
-    opacity:.95;
+.bottom-artwork-placeholder {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  display: block;
+  /* margin-top: auto;
+  object-fit: cover;
+  object-position: bottom; */
+  top: -130px
 }
 
-.boat-placeholder{
-    position:absolute;
-    right:10%;
-    bottom:15px;
-    z-index:3;
-    font-size:6rem;
-    color:#FFE53D;
+@media (max-width: 1024px) {
+  .bg-photo-placeholder {
+    width: 70%;
+  }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
+  .bg-photo-placeholder {
+    width: 90%;
+    opacity: 0.3;
+  }
 
-    .hero-content{
-        padding:40px 28px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .subtitle{
-        font-size:18px;
-    }
-
-    .logo-placeholder{
-        width:90px;
-        height:90px;
-    }
-
-    .waves{
-        height:210px;
-    }
-
+  .content-container {
+    padding: 40px 5% 20px 5%;
+  }
 }
-
 
 
 
