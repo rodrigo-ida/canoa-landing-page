@@ -7,6 +7,7 @@
 body{
     background:#000;
     font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
 
 
@@ -164,6 +165,7 @@ body{
     overflow:hidden;
     background:#111;
     align-self: start;
+    height: 100%;
 }
 
 .community-video iframe{
@@ -200,7 +202,8 @@ body{
 
 .community-item .icon{
     color:#F578C8;
-    font-size:2.8rem;
+    font-size:70px;
+    font-weight:900;
     line-height:1;
     flex-shrink:0;
 }
@@ -259,154 +262,6 @@ body{
 }
 
 
-
-
-
-/* 
-
-.courses{
-    background:#000;
-}
-
-.container{
-    width:min(1180px,90%);
-    margin:0 auto;
-}
-
-.section-title{
-    color:#f37ecb;
-    font-size:40px;
-    font-weight:900;
-    text-transform:uppercase;
-    line-height:1;
-    margin-bottom:70px;
-}
-
-.courses-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-}
-
-.course-card{
-    display:flex;
-    flex-direction:column;
-}
-
-.card-img-and-label-wrapper{
-    max-height: 450px;
-}
-
-.course-image{
-    aspect-ratio:1.2;
-    overflow:hidden;
-}
-
-.course-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
-.course-label{
-    padding:18px 20px;
-    font-size:2.2rem;
-    font-weight:900;
-    text-transform:lowercase;
-    color:#111;
-}
-
-.course-label.orange{
-    background:#d85c3c;
-}
-
-.course-label.pink{
-    background:#ee7cc8;
-}
-
-.course-label.yellow{
-    background:#f8df4b;
-}
-
-.course-content{
-    padding:32px 18px 0;
-    display:flex;
-    flex-direction:column;
-    flex:1;
-}
-
-.course-content h3{
-    font-size:18px;
-    line-height:1.2;
-    margin-bottom:18px;
-    font-weight:900;
-}
-
-.course-card:nth-child(1) h3{
-    color:#d85c3c;
-}
-
-.course-card:nth-child(2) h3{
-    color:#ee7cc8;
-}
-
-.course-card:nth-child(3) h3{
-    color:#f8df4b;
-}
-
-.course-content p{
-    color:#efefef;
-    font-size:1.05rem;
-    line-height:1.7;
-    margin-bottom:38px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px 34px;
-    border-radius:40px;
-    text-decoration:none;
-    color:#111;
-    font-size:1.15rem;
-    font-weight:900;
-    text-transform:lowercase;
-    width:max-content;
-    transition:.25s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.btn.orange{
-    background:#d85c3c;
-}
-
-.btn.pink{
-    background:#ee7cc8;
-}
-
-.btn.yellow{
-    background:#f8df4b;
-}
-
-@media (max-width:1024px){
-
-    .courses-grid{
-        grid-template-columns:1fr;
-        gap:60px;
-    }
-
-    .section-title{
-        font-size:3.4rem;
-    }
-
-} */
-
-
 .courses__container {
     display: flex;
     gap: 20px;
@@ -415,13 +270,14 @@ body{
     padding: 20px;
     box-sizing: border-box;
     color: #fff;
+    margin-top: 10px;
   }
 
   .courses__card {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #111;
+    background-color: black;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -429,13 +285,36 @@ body{
   .courses__image-placeholder {
     width: 100%;
     height: 200px; 
-    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #888;
     font-weight: bold;
     font-size: 1.2rem;
+  }
+
+  .course__img-theater {
+    background-image: url('../assets/images/1.png');
+  }
+
+  .course__img-dance {
+    background-image: url('../assets/images/2.png');
+  }
+
+  .course__img-writing {
+    background-image: url('../assets/images/3.png');
+  }
+
+  .course__img-music {
+    background-image: url('../assets/images/4.png');
+  }
+
+  .course__img-audiovisual {
+    background-image: url('../assets/images/5.png');
+  }
+
+  .course__img-oficinas {
+    background-image: url('../assets/images/6.png');
   }
 
   .courses__category {
@@ -505,7 +384,11 @@ body{
 
 
 
+.courses__schedule-wrapper {
 
+    margin-top: 30px;
+
+}
 
 
 .courses__schedule-container {
@@ -514,11 +397,14 @@ body{
     gap: 20px;
     flex-wrap: wrap;
     font-family: sans-serif;
-    background-color: #38b284;
     margin: 0;
-    padding: 20px;
+    padding: 300px 0 107px 0;
     box-sizing: border-box;
-  }
+    background-image: url('../assets/images/ondas-verdes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: fit-content;
+}
 
   .courses__day-column {
     display: flex;
@@ -617,12 +503,28 @@ body{
     color: white; /* White text for "até o dia 5" */
   }
 
+  .courses__cta-button {    
+    margin-top: 58px;
+    margin-bottom: 58px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 55px;
+    background: yellow;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: 900;
+    transition: .25s;
+}
 
   /* courses_contact.css */
 
 .courses__contact-section {
   background-color: #c75c40; /* Orange background */
-  padding: 40px 20px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -708,7 +610,7 @@ body{
 .footer__container {
   background-color: #000;
   color: #ff85c0; /* Pink color matching the text */
-  padding: 40px 20px;
+  padding: 80px 20px;
   font-family: sans-serif;
 }
 

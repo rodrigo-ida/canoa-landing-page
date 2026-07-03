@@ -58,11 +58,11 @@
 
         <div class="community-video">
             <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Vídeo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+        src="https://www.youtube.com/embed/k1KLPpbXIPQ"
+        title="Vídeo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
         </div>
 
         <div class="community-content">
@@ -72,7 +72,7 @@
             <div class="community-list">
 
                 <div class="community-item">
-                    <div class="icon">✦</div>
+                    <div class="icon">*</div>
                     <p>
                         Lugar para criar e pesquisar
                         junto de outros artistas e
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="community-item">
-                    <div class="icon">✦</div>
+                    <div class="icon">*</div>
                     <p>
                         Eventos, Apresentações, Saraus
                         e oficinas diversas
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="community-item">
-                    <div class="icon">✦</div>
+                    <div class="icon">*</div>
                     <p>
                         Espaço acolhedor e inspirador
                         com direito a sofá, varanda e
@@ -112,7 +112,7 @@
 
 <div class="courses__container">
   <div class="courses__card courses__card-orange">
-    <div class="courses__image-placeholder">Imagem Teatro</div>
+    <div class="courses__image-placeholder course__img-theater"></div>
     <div class="courses__category">teatro</div>
     <div class="courses__content">
       <div class="courses__title">Aulas de Teatro Multilinguagem Iniciante, Intermediário e Avançado</div>
@@ -124,7 +124,7 @@
   </div>
 
   <div class="courses__card courses__card-pink">
-    <div class="courses__image-placeholder">Imagem Dança</div>
+    <div class="courses__image-placeholder course__img-dance"></div>
     <div class="courses__category">dança</div>
     <div class="courses__content">
       <div class="courses__title">Aulas de Dança Contemporânea, Danças Urbanas, Dança de Salão, k-pop e Arms Control</div>
@@ -136,7 +136,7 @@
   </div>
 
   <div class="courses__card courses__card-yellow">
-    <div class="courses__image-placeholder">Imagem Escrita Criativa</div>
+    <div class="courses__image-placeholder course__img-writing"></div>
     <div class="courses__category">escrita criativa</div>
     <div class="courses__content">
       <div class="courses__title">Aulas on-line de escrita criativa</div>
@@ -151,7 +151,7 @@
 
 <div class="courses__container">
   <div class="courses__card courses__card-green">
-    <div class="courses__image-placeholder">Imagem Música</div>
+    <div class="courses__image-placeholder course__img-music"></div>
     <div class="courses__category">música</div>
     <div class="courses__content">
       <div class="courses__title">Aulas personalizadas de teclado, violão, cajon, canto, composição e percussão corporal</div>
@@ -163,7 +163,7 @@
   </div>
 
   <div class="courses__card courses__card-beige">
-    <div class="courses__image-placeholder">Imagem Audiovisual</div>
+    <div class="courses__image-placeholder course__img-audiovisual"></div>
     <div class="courses__category">audiovisual</div>
     <div class="courses__content">
       <div class="courses__title">Curso de processos audiovisuais</div>
@@ -175,7 +175,7 @@
   </div>
 
   <div class="courses__card courses__card-white">
-    <div class="courses__image-placeholder">Imagem Oficinas</div>
+    <div class="courses__image-placeholder course__img-oficinas"></div>
     <div class="courses__category">oficinas</div>
     <div class="courses__content">
       <div class="courses__title">Oficinas específicas</div>
@@ -193,7 +193,8 @@
 
 
 
-<div class="courses__schedule-container">
+<div class="courses__schedule-wrapper">
+  <div class="courses__schedule-container">
 
   <div class="courses__day-column">
     <div class="courses__day-header">SEG</div>
@@ -295,25 +296,29 @@
     Aulas particulares personalizadas de música<br>
     <span style="font-weight: normal;">Dias e horários a combinar com o professor</span>
   </div>
+  </div>
 
 </div>
 
+<section class="courses__prices">
 
-<div class="courses__discount-banner">
-  <div class="courses__discount-title">GANHE ATÉ</div>
-  <div class="courses__discount-amount">35%OFF</div>
-  <div class="courses__discount-text">
-    Pague sua mensalidade <span>até o dia 5</span><br>e receba desconto automático.
+  
+  <div class="courses__discount-banner">
+    <div class="courses__discount-title">GANHE ATÉ</div>
+    <div class="courses__discount-amount">35%OFF</div>
+    <div class="courses__discount-text">
+      Pague sua mensalidade <span>até o dia 5</span><br>e receba desconto automático.
   </div>
 </div>
 
 
 <div class="courses__prices">
-    <img src="./assets/images/prices.png" alt="Imagem de preços" class="courses__prices-image">
-  <a href="#" class="courses__cta-button">quero garantir meu desconto</a>
-
+  <img src="./assets/images/prices.png" alt="Imagem de preços" class="courses__prices-image">
+  <a href="#" class="courses__cta-button">quero garantir meus descontos</a>
+  
 </div>
 
+</section>
 
 <div class="courses__contact-section">
   <h2 class="courses__contact-title">fale com a gente</h2>
@@ -340,11 +345,11 @@
   <div class="footer__content">
     <div class="footer__social">
       <div class="footer__social-item">
-        <img src="instagram-icon.png" alt="Instagram" class="footer__icon">
+        <img src="./assets/images/insta.png" alt="Instagram" class="footer__icon">
         <span>@canoadeteatro</span>
       </div>
       <div class="footer__social-item">
-        <img src="whatsapp-icon.png" alt="WhatsApp" class="footer__icon">
+        <img src="./assets/images/wpp.png" alt="WhatsApp" class="footer__icon">
         <span>55 11 94467-5899</span>
       </div>
     </div>
@@ -357,7 +362,7 @@
     </div>
 
     <div class="footer__website">
-      canoadeteatro.com.br
+      <a href="https://canoadeteatro.com.br" target="_blank" rel="noopener noreferrer">canoadeteatro.com.br</a> 
     </div>
   </div>
 </footer>
