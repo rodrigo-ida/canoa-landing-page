@@ -14,54 +14,64 @@ body{
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #000000;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
+    /* background-image: url('../assets/images/topo1.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 
-.bg-photo-placeholder {
-  position: absolute;
+.bg-photo-topo {
+  position: relative;
   top: 0;
   right: 0;
   width: 100%;
-  /* max-width: 800px; */
   height: auto;
   z-index: 1;
-  object-fit: contain;
-  object-position: top right;
+  margin-bottom: 40px; 
 }
 
 .content-container {
-  position: relative;
+  position: absolute;
   z-index: 2;
   padding: 30px 8% 40px 8%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  background-image: url('../assets/images/topo.png');
+  /* flex-grow: 1; */
+  /* background-image: url('../assets/images/topo1.png');
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 130vh;
+  background-repeat: no-repeat; */
+  /* height: 130vh; */
+  width: 100%;
 }
 
 .logo-placeholder {
-  width: 90px;
+  width: 8%;
   height: auto;
   margin-bottom: 20px;
   object-fit: contain;
 }
 
 .text-wrapper {
-  max-width: 700px;
+  /* max-width: 700px; */
+  width: 100%;
   position: relative;
   z-index: 3;
 }
 
 .text-wrapper img {
-    width: 40%;
+    width: 25%;
+}
+
+@media (max-width: 1300px) {
+  .text-wrapper img {
+    width: 20%;
+  }
 }
 
 .main-title {
@@ -92,6 +102,22 @@ body{
   letter-spacing: 0;
 }
 
+@media (max-width: 1300px) {
+  .subtitle  {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1700px) {
+  .subtitle  {
+    font-size: 28px;
+  }
+}
+@media (min-width: 2000px) {
+  .subtitle  {
+    font-size: 40px;
+  }
+}
+
 .cta-button {
   display: inline-block;
   background-color: #4EBCA1;
@@ -104,6 +130,18 @@ body{
   border-radius: 50px;
   text-transform: lowercase;
   transition: transform 0.2s ease;
+}
+
+@media (min-width: 1700px) {
+  .cta-button  {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .cta-button  {
+    font-size: 40px;
+  }
 }
 
 .cta-button:hover {
@@ -168,6 +206,12 @@ body{
     height: 100%;
 }
 
+@media (max-width:1300px){
+    .community-video{
+        height: 80%;
+    }
+}
+
 .community-video iframe{
     width:100%;
     height:100%;
@@ -221,6 +265,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-width: 300px;
     height: 50px;
     background: #F578C8;
     border-radius: 999px;
@@ -271,6 +316,7 @@ body{
     box-sizing: border-box;
     color: #fff;
     margin-top: 10px;
+    margin: auto;
   }
 
   .courses__card {
@@ -398,21 +444,31 @@ body{
     flex-wrap: wrap;
     font-family: sans-serif;
     margin: 0;
-    padding: 300px 0 107px 0;
+    padding: 50px 0 50px 0;
     box-sizing: border-box;
-    background-image: url('../assets/images/ondas-verdes.png');
+    /* background-image: url('../assets/images/ondas-verdes.png'); */
     background-repeat: no-repeat;
     background-size: cover;
     min-height: fit-content;
+    background-color: #36B284; 
 }
+
+.courses__schedule-bg2 {
+  width: 100%;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
 
   .courses__day-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 180px;
+    min-width: 140px;
+    width: 14%;
   }
+
 
   .courses__day-header {
     color: white;
@@ -662,5 +718,28 @@ body{
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+  }
+}
+
+.site-footer-authorship {
+  width: 100%;
+  background-color: #C75C40;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-footer-authorship p {
+  margin: 0;
+  color: #1A1A1A;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .site-footer p {
+    font-size: 13px;
   }
 }
