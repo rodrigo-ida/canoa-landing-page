@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    /* outline: 1px solid red; */
 }
 
 body{
@@ -542,11 +543,12 @@ body{
 
   .courses__discount-amount {
     color: #e5d635; /* Yellow color matching the image */
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900; /* Extra bold */
     line-height: 1;
     margin: 0;
   }
+
 
   .courses__discount-text {
     color: #e5d635; /* Yellow text for the conditions */

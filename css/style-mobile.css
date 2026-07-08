@@ -1,0 +1,584 @@
+/* =========================================
+   STYLE-MOBILE.CSS (Telas até 1023px)
+   ========================================= */
+
+@media (max-width: 1023px) {
+    
+    /* --- SEÇÃO 1: HERO --- */
+    
+    .hero-section {
+        min-height: 100vh;
+        /* Usando svh se o navegador suportar, para ignorar barras de navegação mobile */
+        min-height: 100svh; 
+        position: relative;
+        display: block;
+    }
+
+    /* Transformando a tag <img> em um fundo fixo que cobre toda a seção */
+    .bg-photo-topo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom; /* Prioriza a base (montanhas) e o meio (pessoas) */
+        margin-bottom: 0;
+        z-index: 1;
+    }
+
+    .content-container {
+        position: relative;
+        z-index: 2;
+        padding: 40px 25px; /* Margens de respiro seguras para mobile */
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    .logo-placeholder {
+        width: 25%;
+        min-width: 80px;
+        max-width: 110px;
+        margin-bottom: 35px;
+    }
+
+    .text-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Imagem "Mais que uma escola..." */
+    .text-wrapper img {
+        width: 40%;
+        max-width: 320px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        max-width: 95%;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 24px;
+        text-align: center;
+    }
+
+    /* Micro-ajustes para telas muito pequenas (ex: iPhone SE, Galaxy Fold - 320px) */
+    @media (max-width: 360px) {
+        .content-container {
+            padding: 30px 15px;
+        }
+        .subtitle {
+            font-size: 12px;
+        }
+        .cta-button {
+            font-size: 14px;
+            padding: 12px 20px;
+        }
+    }
+
+
+    /* --- SEÇÃO 2: AQUI VOCÊ VAI ENCONTRAR (COMMUNITY) --- */
+    
+    .community {
+        padding: 50px 0 60px 0; /* Ajusta o respiro superior e inferior para mobile */
+    }
+
+    .community-container {
+        grid-template-columns: 1fr; /* Força 1 coluna em todo o espectro mobile */
+        gap: 35px; /* Reduz o espaço enorme entre o vídeo e os textos */
+        width: 90%; 
+    }
+
+    .community-video {
+        height: auto; /* Deixa a altura se adaptar ao aspect-ratio */
+        border-radius: 8px; /* Opcional: um leve arredondamento nas bordas do vídeo cai bem no mobile */
+    }
+
+    .community-content {
+        max-width: 100%; /* Quebra o limite de 80% do desktop */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Prepara para centralizar elementos se necessário */
+    }
+
+    .community-content h2 {
+        text-align: center; /* Conforme o print, o título está centralizado */
+        font-size: 26px; /* Ajuste para dar peso no mobile */
+        margin-bottom: 35px;
+    }
+
+    .community-list {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .community-item {
+        gap: 16px; /* Aproxima um pouco mais o ícone do texto */
+        align-items: center; /* Centraliza o asterisco verticalmente em relação ao texto */
+    }
+
+    .community-item .icon {
+        font-size: 45px; /* Reduz o tamanho do asterisco (era 70px) para ficar proporcional */
+        line-height: 1; 
+        margin-top: 4px; /* Pequeno ajuste de alinhamento ótico */
+    }
+
+    .community-item p {
+        /* Sobrescreve os 1.35rem gigantes do CSS original na quebra de 1000px */
+        font-size: 15px; 
+        line-height: 1.3;
+    }
+
+    .community-btn {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 320px; /* Evita que o botão fique muito esticado em celulares maiores */
+        height: 55px; /* Levemente mais alto para facilitar o clique (área de toque) */
+        font-size: 18px;
+    }
+
+    /* Micro-ajustes para telas muito pequenas (ex: 320px) */
+    @media (max-width: 360px) {
+        .community-content h2 {
+            font-size: 22px;
+        }
+        .community-item .icon {
+            font-size: 38px;
+        }
+        .community-item p {
+            font-size: 14px;
+        }
+        .community-btn {
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+    /* =========================================
+   CONTROLE DE VISIBILIDADE GLOBAL
+   ========================================= */
+
+/* Esconde a nova seção de carrossel em telas grandes */
+@media (min-width: 1024px) {
+    .mobile-courses-section {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* Esconde os cards estáticos do desktop no mobile */
+    .courses__container {
+        display: none !important;
+    }
+
+    /* --- SEÇÃO 3: NOSSOS CURSOS (CARROSSEL) --- */
+    .mobile-courses-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 60px 0;
+        background-color: #000;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mobile-courses-title {
+        color: #F8D533; /* Amarelo do logo */
+        font-size: 32px;
+        text-transform: uppercase;
+        font-family: 'Anton', sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-carousel-dots {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .mobile-carousel-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #f578c8; /* Rosa padrão */
+    }
+
+    .mobile-carousel-dots .dot.active {
+        background-color: #fff; /* Branco quando ativo */
+    }
+
+    .mobile-carousel-container {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding: 0 7%; /* Espaçamento lateral para ver a pontinha do próximo card */
+        scroll-behavior: smooth;
+        
+        /* Oculta a barra de rolagem (scroll) mas mantém o funcionamento */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .mobile-carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-course-card {
+        min-width: 85%; /* Largura do card no carrossel */
+        scroll-snap-align: center; /* Cria o efeito "ímã" ao deslizar */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-course-img {
+        width: 100%;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        /* Reutiliza as classes .course__img-* originais para as imagens */
+    }
+    
+    .mobile-course-category {
+        padding: 12px 20px;
+        font-size: 26px;
+        font-family: 'Anton', sans-serif;
+        color: #111;
+    }
+
+    .mobile-course-content {
+        padding: 25px 5px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .mobile-course-name {
+        font-size: 17px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .mobile-course-desc {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .mobile-course-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 50px;
+        border-radius: 999px;
+        color: #111;
+        font-size: 20px;
+        font-family: 'Anton', sans-serif;
+        margin: auto auto 0 auto; /* Empurra pro rodapé do card e centraliza */
+        transition: transform 0.2s;
+    }
+
+    .mobile-course-btn:active {
+        transform: scale(0.95);
+    }
+
+    /* --- SISTEMA DE CORES DOS CARDS --- */
+    
+    /* Laranja (Teatro) */
+    .category-orange, .btn-orange { background-color: #c75c40; }
+    .title-orange { color: #c75c40; }
+
+    /* Rosa (Dança) */
+    .category-pink, .btn-pink { background-color: #ff85c0; }
+    .title-pink { color: #ff85c0; }
+
+    /* Amarelo (Escrita) */
+    .category-yellow, .btn-yellow { background-color: #e5d635; }
+    .title-yellow { color: #e5d635; }
+
+    /* Verde (Música) */
+    .category-green, .btn-green { background-color: #4CAF50; }
+    .title-green { color: #4CAF50; }
+
+    /* Bege (Audiovisual) */
+    .category-beige, .btn-beige { background-color: #c9ab86; }
+    .title-beige { color: #c9ab86; }
+
+    /* Branco (Oficinas) */
+    .category-white, .btn-white { background-color: #f0f0f0; }
+    .title-white { color: #f0f0f0; }
+}
+
+
+
+
+
+/* =========================================
+   CONTROLE DE VISIBILIDADE GLOBAL
+   ========================================= */
+
+/* Esconde a nova seção de cronograma no desktop */
+@media (min-width: 1024px) {
+    .mobile-schedule-section {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* Esconde o grid de cronograma estático do desktop no mobile */
+    .courses__schedule-wrapper {
+        display: none !important;
+    }
+
+    /* --- SEÇÃO 4: CRONOGRAMA (CARROSSEL MOBILE) --- */
+    
+    .mobile-schedule-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        margin-top: 30px;
+    }
+
+    .mobile-schedule-bg-top, 
+    .mobile-schedule-bg-bottom {
+        width: 100%;
+        display: block;
+        margin-top: -2px; /* Remove gaps de renderização nativos do navegador */
+        margin-bottom: -2px;
+    }
+
+    .mobile-schedule-content {
+        background-color: #36B284;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 40px 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Reaproveitando estilo dos pontinhos do carrossel anterior */
+    .mobile-schedule-content .mobile-carousel-dots {
+        margin-bottom: 25px;
+    }
+    .mobile-schedule-content .mobile-carousel-dots .dot {
+        background-color: rgba(255, 255, 255, 0.4); /* Fundo verde pede pontos mais neutros */
+    }
+    .mobile-schedule-content .mobile-carousel-dots .dot.active {
+        background-color: #fff;
+    }
+
+    .mobile-schedule-content .mobile-carousel-container {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding: 0 5%;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .mobile-schedule-content .mobile-carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-schedule-slide {
+        min-width: 90%;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* Espaço entre os cards */
+    }
+
+    .mobile-day-header {
+        font-family: 'Anton', sans-serif;
+        font-size: 45px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    /* Ajuste nos cards originais herdados para o carrossel mobile */
+    .mobile-schedule-slide .courses__schedule-card {
+        border-radius: 4px;
+        padding: 12px 15px;
+    }
+
+    /* Layout Específico do Sábado (Grid de 2 colunas) */
+    .mobile-sab-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        align-items: start;
+    }
+
+    .mobile-sab-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mobile-side-note {
+        margin-top: 0;
+        width: 100%;
+        padding: 15px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .courses__prices {
+    padding: 0 4px;
+    padding-bottom: 20px;
+    }
+
+    .courses__cta-button {
+            height: 30px;
+    font-size: 13px;
+    margin: 10px 0;
+    width: 70%;
+    }
+
+    /* --- SEÇÃO: FALE COM A GENTE --- */
+    
+    .courses__contact-section {
+        padding: 80px 30px; /* Ajuste do respiro superior e inferior */
+    }
+
+    .courses__contact-title {
+        font-family: 'Anton', sans-serif; /* Aplicando a fonte condensada vista no print */
+        font-size: 42px; /* Aumentando o destaque no mobile */
+        font-weight: normal; /* O Anton já é naturalmente espesso */
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        line-height: 1.1;
+    }
+
+    .courses__contact-form {
+        width: 100%;
+        max-width: 100%; /* Permite que ocupe a largura toda no telemóvel, respeitando o padding da secção */
+        gap: 12px; /* Reduz ligeiramente o espaço entre os inputs */
+    }
+
+    .courses__contact-input {
+        padding: 16px 15px;
+        font-size: 16px; /* Essencial: 16px evita que o iOS (iPhone) faça zoom automático ao focar no campo */
+        border-radius: 0; /* No print, os inputs têm cantos retos (quadrados) */
+    }
+
+    /* Ajuste da seta cor-de-rosa do select para o mobile */
+    .courses__select-wrapper::after {
+        right: 15px;
+        font-size: 12px; 
+    }
+
+    .courses__contact-submit {
+        font-family: 'Anton', sans-serif; /* O botão também partilha a mesma tipografia do título */
+        font-size: 22px;
+        font-weight: normal;
+        width: 85%; /* No print o botão não ocupa 100% da largura */
+        max-width: 280px;
+        height: 55px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px; /* Formato de pílula arredondada */
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    /* --- FOOTER --- */
+    
+    .footer__container {
+        padding: 60px 30px; /* Ajuste de respiro lateral e vertical para o mobile */
+    }
+
+    .footer__content {
+        flex-direction: column;
+        align-items: flex-start; /* Alinhamento geral à esquerda */
+        gap: 35px; /* Espaçamento entre os 3 blocos de informação */
+        width: 100%;
+    }
+
+    /* REORDENAÇÃO VISUAL COM FLEXBOX 
+      (Para bater com o print sem mexer no HTML)
+    */
+    
+    /* 1. O Site sobe para o topo */
+    .footer__website {
+        order: 1;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* 2. Redes sociais ficam no meio */
+    .footer__social {
+        order: 2;
+        gap: 20px; /* Espaço entre o Instagram e o WhatsApp */
+        width: 100%;
+    }
+
+    .footer__social-item {
+        font-size: 18px;
+        font-weight: 500;
+        gap: 12px; /* Espaço entre o ícone e o texto */
+    }
+
+    .footer__icon {
+        width: 28px; /* Ícones levemente maiores para facilitar visualização no mobile */
+        height: auto;
+    }
+
+    /* 3. O Endereço desce para o final */
+    .footer__address {
+        order: 3;
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    .footer__address strong {
+        font-size: 19px;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    /* Micro-ajustes para a faixa final de direitos autorais */
+    .site-footer-authorship {
+        padding: 20px 15px;
+    }
+
+    .site-footer-authorship p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+
+
