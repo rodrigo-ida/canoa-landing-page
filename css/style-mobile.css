@@ -204,9 +204,9 @@
         color: #F8D533; /* Amarelo do logo */
         font-size: 32px;
         text-transform: uppercase;
-        font-family: 'Anton', sans-serif;
         letter-spacing: 1px;
         margin-bottom: 20px;
+        font-family: 'Thunder', sans-serif;
     }
 
     .mobile-carousel-dots {
@@ -262,8 +262,8 @@
     .mobile-course-category {
         padding: 12px 20px;
         font-size: 26px;
-        font-family: 'Anton', sans-serif;
         color: #111;
+        font-family: 'Thunder', sans-serif;
     }
 
     .mobile-course-content {
@@ -296,7 +296,6 @@
         border-radius: 999px;
         color: #111;
         font-size: 20px;
-        font-family: 'Anton', sans-serif;
         margin: auto auto 0 auto; /* Empurra pro rodapé do card e centraliza */
         transition: transform 0.2s;
     }
@@ -417,12 +416,12 @@
     }
 
     .mobile-day-header {
-        font-family: 'Anton', sans-serif;
         font-size: 45px;
         color: #fff;
         text-transform: uppercase;
         margin-bottom: 10px;
         letter-spacing: 1px;
+        font-family: 'Thunder', sans-serif;
     }
 
     /* Ajuste nos cards originais herdados para o carrossel mobile */
@@ -476,7 +475,6 @@
     }
 
     .courses__contact-title {
-        font-family: 'Anton', sans-serif; /* Aplicando a fonte condensada vista no print */
         font-size: 42px; /* Aumentando o destaque no mobile */
         font-weight: normal; /* O Anton já é naturalmente espesso */
         letter-spacing: 1px;
@@ -503,7 +501,6 @@
     }
 
     .courses__contact-submit {
-        font-family: 'Anton', sans-serif; /* O botão também partilha a mesma tipografia do título */
         font-size: 22px;
         font-weight: normal;
         width: 85%; /* No print o botão não ocupa 100% da largura */
