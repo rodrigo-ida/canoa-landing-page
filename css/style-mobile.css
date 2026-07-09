@@ -16,6 +16,10 @@
 
     /* Transformando a tag <img> em um fundo fixo que cobre toda a seção */
     .bg-photo-topo {
+
+        display: none; /* Esconde a imagem original no mobile */
+    }
+    .bg-photo-topo-mobile {
         position: absolute;
         top: 0;
         left: 0;
