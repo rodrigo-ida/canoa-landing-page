@@ -6,13 +6,25 @@
     font-style: normal;
 }
 
-/* Importando a Thunder (versão Web WOFF2, Low Contrast) */
 @font-face {
     font-family: 'Thunder';
-    /* Usando a versão WOFF2 que é a mais otimizada para web */
-    src: url('./fonts/THUNDER/Fonts/Web-TT/Thunder-LC.woff2') format('woff2');
+    src: 
+         /* 1ª tentativa: WOFF2 (Mais rápido) */
+         url('fonts/THUNDER/Fonts/Web-TT/Thunder-LC.woff2') format('woff2'),
+         
+         /* 2ª tentativa: WOFF padrão */
+         url('fonts/THUNDER/Fonts/Web-TT/Thunder-LC.woff') format('woff'),
+         
+         /* 3ª tentativa: TTF (Garantia extra) */
+         url('fonts/THUNDER/Fonts/Web-TT/Thunder-LC.ttf') format('truetype');
+         
     font-weight: normal;
     font-style: normal;
+}
+
+/* Aplicando a fonte nos links */
+a {
+    font-family: 'Thunder', sans-serif;
 }
 
 
@@ -130,7 +142,7 @@ a {
   margin-top: 35px;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-family: 'Thunder', sans-serif;
+  font-family: 'Thunder', 'Brush Script MT';
 }
 
 @media (max-width: 1300px) {
