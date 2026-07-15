@@ -142,22 +142,21 @@ a {
   margin-top: 35px;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-family: 'Thunder', 'Brush Script MT';
+  font-family: 'Thunder', 'sans-serif';
+  font-size: 26px;
+  letter-spacing: 2px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1023px) {
   .subtitle  {
     font-size: 16px;
   }
 }
-@media (min-width: 1700px) {
-  .subtitle  {
-    font-size: 28px;
-  }
-}
+
 @media (min-width: 2000px) {
   .subtitle  {
     font-size: 40px;
+    letter-spacing: 2px;
   }
 }
 
@@ -172,6 +171,9 @@ a {
   border-radius: 50px;
   text-transform: lowercase;
   transition: transform 0.2s ease;
+
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 1700px) {
@@ -267,18 +269,18 @@ a {
 
 .community-content h2{
     color:#F8D533;
-    font-size:20px;
+    font-size:30px;
     font-weight:900;
     text-transform:uppercase;
     line-height:1;
-    margin-bottom:48px;
+    margin-bottom:25px;
     font-family: 'Thunder', sans-serif;
 }
 
 .community-list{
     display:flex;
     flex-direction:column;
-    gap:34px;
+    gap:10px;
 }
 
 .community-item{
@@ -408,10 +410,10 @@ a {
 
   .courses__category {
     padding: 15px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2rem;
     font-family: 'Thunder', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bolder;
   }
 
   .courses__content {
@@ -443,6 +445,8 @@ a {
     text-align: center;
     margin-top: 20px;
     align-self: flex-start; 
+    font-size: 20px;
+    letter-spacing: 1px;
   }
 
   .courses__card-orange .courses__category { background-color: #d96f5b; color: #000; }
@@ -617,9 +621,11 @@ a {
     border-radius: 999px;
     text-decoration: none;
     color: #111;
-    font-size: 20px;
     font-weight: 900;
     transition: .25s;
+
+    font-size: 26px;
+    letter-spacing: 1px;
 }
 
   /* courses_contact.css */
@@ -755,6 +761,12 @@ a {
 .footer__website {
   font-size: 1.2rem;
   font-weight: bold;
+}
+.footer__website a {
+
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 /* Responsive adjustments (optional) */
